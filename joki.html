@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JOKI CURSE OF AROS </title>
+    <style>
+        /* CSS Global & Reset */
+        body {
+            font-family: 'Consolas', 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            text-align: center;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Kontainer Utama untuk efek glow keseluruhan */
+        .main-container {
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        /* Neon Title (Dibuat Pas 1 Baris) */
+        .header {
+            font-size: 30px; /* Ukuran yang lebih kecil */
+            font-weight: 900;
+            color: #ff00ff; /* Neon Magenta */
+            margin: 0;
+            padding: 0 10px;
+            letter-spacing: 3px; /* Jarak huruf disesuaikan */
+            white-space: nowrap;
+            /* Efek shadow seperti di gambar */
+            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px rgba(255, 0, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .emoji {
+            font-size: 1.5em;
+            line-height: 1;
+        }
+
+        /* Sub Judul */
+        .sub-header {
+            color: #ffffff;
+            font-size: 14px; /* Ukuran lebih kecil seperti di gambar */
+            font-weight: 300;
+            margin: 10px 0 20px;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Kontainer Gambar */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        
+        /* Box di sekitar gambar */
+        .image-box {
+            width: 120px; /* Ukuran box yang pas */
+            height: 120px;
+            background-color: #222222;
+            border: 3px solid #ff00ff; /* Border Magenta */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Gambar GIF */
+        .image-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            /* Hapus border internal agar hanya box yang bercahaya */
+            border: none;
+            box-shadow: none;
+            transition: transform 0.3s;
+        }
+        
+        /* Gambar utama (Mumi) - tengah */
+        .main-image {
+            background-color: #333333; /* Warna berbeda untuk gambar tengah */
+            border: 3px solid #00fffb; /* Border Cyan untuk kontras */
+            box-shadow: 0 0 15px rgba(0, 255, 251, 0.8);
+        }
+
+        /* Kontainer Tabel Harga */
+        .table-container {
+            width: 90%;
+            max-width: 450px; /* Dibuat lebih ramping */
+            margin: 0 auto 50px auto;
+            padding: 0;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            /* Border menyala Ungu seperti di gambar */
+            box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+            border: 2px solid #ff00ff;
+            overflow: hidden;
+        }
+        
+        /* Judul Tabel */
+        .table-title {
+            background-color: #1a1a1a;
+            color: #ff00ff;
+            font-size: 14px;
+            padding: 15px 10px;
+            border-bottom: 2px solid #ff00ff;
+            letter-spacing: 1px;
+        }
+
+        /* Tabel Harga */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .price-table th, .price-table td {
+            padding: 12px;
+            text-align: center;
+            border: none; /* Hapus border internal */
+        }
+        .price-table th {
+            background-color: #333333;
+            color: #ff00ff;
+            font-size: 14px;
+            border-bottom: 1px solid #ff00ff; /* Garis pemisah header tabel */
+        }
+        .price-table td {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            border-bottom: 1px solid #333333;
+        }
+        .price-table .price {
+            color: #00fffb; /* Neon Cyan untuk harga */
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Whatsapp Button Styling */
+        .whatsapp-button {
+            display: inline-block;
+            background: #25D366; 
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 30px; 
+            margin-bottom: 40px;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
+            transition: transform 0.3s;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <h1 class="header">
+            <span class="emoji"></span> JOKI CURSE OF AROS <span class="emoji"></span>
+        </h1>
+
+        <h2 class="sub-header">
+            Leveling Kilat 🚀 | Layanan Elite
+        </h2>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="https://files.catbox.moe/8dwh6d.gif" alt="GIF Karakter Aros Kiri">
+            </div>
+            
+            <div class="image-box main-image">
+                <img src="https://files.catbox.moe/1jo5tv.gif" alt="GIF Karakter Aros Utama">
+            </div>
+            
+            <div class="image-box">
+                <img src="https://files.catbox.moe/8dwh6d.gif" alt="GIF Karakter Aros Kanan">
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-title">
+                💎 PRICE LIST - CURSE OF AROS 💎
+            </div>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Rentang Level</th>
+                        <th>Harga (IDR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Level 1 - 10</td><td class="price">1.000</td></tr>
+                    <tr><td>Level 11 - 20</td><td class="price">2.000</td></tr>
+                    <tr><td>Level 21 - 30</td><td class="price">3.000</td></tr>
+                    <tr><td>Level 31 - 40</td><td class="price">4.000</td></tr>
+                    <tr><td>Level 41 - 50</td><td class="price">5.000</td></tr>
+                    <tr><td>Level 51 - 60</td><td class="price">6.000</td></tr>
+                    <tr><td>Level 61 - 70</td><td class="price">7.000</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <a href="https://wa.me/+62859131044073?text=Bang%20mau%20joki%20Curse%20of%20Aros." class="whatsapp-button" target="_blank">
+            ORDER JOKI (Fast Response)
+        </a>
+
+    </div>
+
+</body>
+</html>
